@@ -3,19 +3,29 @@ package introdutory;
 import java.util.Scanner;
 
 public class Exe3 {
+	private static final Scanner scanner = new Scanner(System.in);
+	
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		scanner.useLocale(java.util.Locale.US);
+
+		int T = 1;
+		// int T = scanner.nextInt();
+		// scanner.nextLine();
 		
-		int i = scan.nextInt();
-		scan.nextLine();
-		double d = scan.nextDouble();
-		scan.nextLine();
-		String s = scan.nextLine();
-		
-		
-		
-		System.out.println("String: " + s);
-		System.out.println("Double: " + d);
-		System.out.println("Int: " + i);
+		while (T > 0) {
+			solve();
+			T--;
+		}
 	}
+
+
+	private static void solve() {
+		int i = scanner.nextInt(); scanner.nextLine();
+		double d = scanner.nextDouble(); scanner.nextLine();
+		String s = scanner.nextLine();
+
+		System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
+	} 
 }
