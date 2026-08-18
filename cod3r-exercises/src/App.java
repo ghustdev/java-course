@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Date;
 
+import java.lang.Math;
+
 public class App {
 	public static void main(String[] args) throws Exception {
 		System.out.println("Hello, World!");
@@ -71,5 +73,11 @@ public class App {
 //		Double soma = numero1 + numero2;
 		
 		System.out.println(soma);
+		
+		System.out.println(Math.abs(-10));
+		System.out.println((int) Math.pow(2, 4));
+		
+		System.out.println(1 ^ 3);
+		System.out.println(1 ^ 1);
 	}
 }
