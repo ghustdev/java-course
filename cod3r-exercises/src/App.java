@@ -5,9 +5,12 @@ import java.time.LocalDate;
 import java.util.Date;
 
 import java.lang.Math;
+import java.util.Scanner;
 
 public class App {
 	public static void main(String[] args) throws Exception {
+		Scanner scan = new Scanner(System.in);
+		
 		System.out.println("Hello, World!");
 		
 		Artigo artigo1 = new Artigo("Java Basics", "John Doe", LocalDate.of(2023, 1, 15), "Programming");
@@ -79,5 +82,21 @@ public class App {
 		
 		System.out.println(1 ^ 3);
 		System.out.println(1 ^ 1);
+		
+		System.out.println("Quantidade de notas: ");
+		int qtd = scan.nextInt(); scan.nextLine();
+		
+		double[] notas = new double[qtd];
+		int aux = qtd;
+		
+		while (qtd != 0) {
+			System.out.printf("Nota %d: ", aux - qtd + 1);
+			notas[aux - qtd] = scan.nextInt(); scan.nextLine();
+			qtd--;
+		}
+		
+		for (double nota : notas) {
+			System.out.println(nota);
+		}
 	}
 }
