@@ -1,0 +1,1 @@
+javac introdutory/Exe4.java && java introdutory/Exe4 < input.txt
