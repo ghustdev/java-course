@@ -2,10 +2,21 @@ import initial.code.Artigo;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Date;
-
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.lang.Math;
 import java.util.Scanner;
+import java.util.Stack;
+import java.util.TreeSet;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 
 public class App {
 	public static void main(String[] args) throws Exception {
@@ -83,13 +94,13 @@ public class App {
 		System.out.println(1 ^ 3);
 		System.out.println(1 ^ 1);
 		
-		System.out.println("Quantidade de notas: ");
+		/* System.out.println("Quantidade de notas: ");
 		int qtd = scan.nextInt(); scan.nextLine();
 		
 		double[] notas = new double[qtd];
 		int aux = qtd;
-		
-		while (qtd != 0) {
+		 */
+		/* while (qtd != 0) {
 			System.out.printf("Nota %d: ", aux - qtd + 1);
 			notas[aux - qtd] = scan.nextInt(); scan.nextLine();
 			qtd--;
@@ -97,6 +108,65 @@ public class App {
 		
 		for (double nota : notas) {
 			System.out.println(nota);
-		}
+		} */
+
+		// Collections Java
+		HashSet<Integer> numeros = new HashSet<>(); // desconsidera ordem
+		TreeSet<Integer> numeros2 = new TreeSet<>(); // considera ordem de inserção
+		numeros.add(10);
+		numeros.add(10);
+		numeros.add(20);
+		numeros.add(20);
+		numeros.add(null);
+		// remove
+		// contains
+		// //size
+		// clear
+		System.out.println(numeros);
+
+		// int less = null;
+
+		ArrayList<String> nomes = new ArrayList<>();
+		ArrayList<Integer> testes = new ArrayList<>();
+		List<String> tess = new ArrayList<>();
+		List<String> tes = new LinkedList<>();
+		// add
+		// get
+		// set
+		// remove
+		// size
+		// contains -> usa método hashCode para comparar a posição da memória
+
+		Queue<Integer> fila = new LinkedList<>();
+		fila.add(1);
+		fila.add(2);
+		System.out.println(fila);
+		System.out.println(fila.poll());
+		fila.remove();
+		System.out.println(fila.peek()); // obtem proximo elemento
+		System.out.println(fila);
+
+		Stack<Integer> stack = new Stack<>();
+		Deque<Integer> pilha = new ArrayDeque<>();
+		stack.add(1);
+		stack.push(2);
+		stack.push(3);
+		System.out.println(stack);
+		stack.pop();
+		System.out.println(stack);
+		System.out.println(stack.peek());
+
+		// Complexidade algoritmico O(1) na maioria dos casos
+		Map<Integer, String> cadastro = new HashMap<>();
+		cadastro.put(1, "Gustavo");
+		cadastro.put(1, "Felipe");
+		cadastro.put(2, "Ster");
+		System.out.println(cadastro);
+		cadastro.put(3, "Ster");
+		System.out.println(cadastro.keySet());
+		System.out.println(cadastro.values());
+		System.out.println(cadastro.entrySet());
+		// containsKey
+		// constainsValue
 	}
 }
