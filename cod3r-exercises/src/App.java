@@ -14,6 +14,9 @@ import java.lang.Math;
 import java.util.Scanner;
 import java.util.Stack;
 import java.util.TreeSet;
+
+import POO.EstudoPOO;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -168,5 +171,11 @@ public class App {
 		System.out.println(cadastro.entrySet());
 		// containsKey
 		// constainsValue
+
+		// hashCode -- Atrelado ao contains
+
+		System.out.println("teste");
+
+		EstudoPOO poo = new EstudoPOO();
 	}
 }
